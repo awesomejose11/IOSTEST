@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct5tdwolnox16"]
+
+[ext_resource type="VideoStream" uid="uid://dgqpkfqehvjf6" path="res://Scenes/Project_Name_199.ogv" id="1_tochr"]
+[ext_resource type="Texture2D" uid="uid://dp3a1sg7635ug" path="res://Logo.png" id="2_phf2g"]
+[ext_resource type="Script" uid="uid://dqrt6hgku8p4x" path="res://ButtonTitles.gd" id="3_quvj1"]
+
+[node name="Title" type="Node2D"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -646.0
+offset_top = -386.0
+offset_right = 634.0
+offset_bottom = 334.0
+stream = ExtResource("1_tochr")
+autoplay = true
+loop = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+position = Vector2(-340, -177.00002)
+scale = Vector2(0.3859375, 0.38828126)
+texture = ExtResource("2_phf2g")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_quvj1")
+
+[node name="Control" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Inventory" type="Button" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = -567.0
+offset_top = -14.0
+offset_right = -256.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 65
+text = "Inventory
+"
+flat = true
+
+[node name="Story" type="Button" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = -637.0
+offset_top = -82.0
+offset_right = -326.0
+offset_bottom = 16.0
+theme_override_font_sizes/font_size = 65
+text = "Story
+"
+flat = true
+
+[node name="Shop" type="Button" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = -642.0
+offset_top = 63.0
+offset_right = -331.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 65
+text = "Shop
+"
+flat = true
+
+[node name="Options" type="Button" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = -604.0
+offset_top = 142.0
+offset_right = -293.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 65
+text = "Options
+"
+flat = true
+
+[node name="Credits" type="Button" parent="Node2D/Control"]
+layout_mode = 0
+offset_left = -573.0
+offset_top = 221.0
+offset_right = -342.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 65
+text = "Credits"
+flat = true
+
+[connection signal="pressed" from="Node2D/Control/Inventory" to="Node2D" method="_on_inventory_pressed"]
+[connection signal="pressed" from="Node2D/Control/Story" to="Node2D" method="_on_story_pressed"]
+[connection signal="pressed" from="Node2D/Control/Shop" to="Node2D" method="_on_shop_pressed"]
+[connection signal="pressed" from="Node2D/Control/Options" to="Node2D" method="_on_options_pressed"]
+[connection signal="pressed" from="Node2D/Control/Credits" to="Node2D" method="_on_credits_pressed"]

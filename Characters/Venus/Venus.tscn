@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhwvox23gccuh"]
+
+[ext_resource type="Texture2D" uid="uid://bgx8e7gu52qd5" path="res://Characters/Venus/v1.png" id="1_fw8j6"]
+[ext_resource type="Script" uid="uid://chl83w1g21rj3" path="res://Characters/Venus/Venus.gd" id="1_x5uv0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x5uv0"]
+size = Vector2(441, 437)
+
+[node name="Venus" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+script = ExtResource("1_x5uv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(537, 332)
+texture = ExtResource("1_fw8j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D/Sprite2D"]
+position = Vector2(3, 3.5)
+shape = SubResource("RectangleShape2D_x5uv0")

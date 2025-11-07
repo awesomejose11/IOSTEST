@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd5xmiyt5c3uv"]
+
+[ext_resource type="Script" uid="uid://dc06awkdoitle" path="res://Characters/Earth/Character.gd" id="1_1uw0p"]
+[ext_resource type="Texture2D" uid="uid://me38ym84ty1n" path="res://Characters/Earth/earth 2025 - Frame 1.png" id="2_hk70b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cegnh"]
+size = Vector2(448.63632, 414.6212)
+
+[node name="Earth" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D"]
+motion_mode = 1
+script = ExtResource("1_1uw0p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/CharacterBody2D"]
+position = Vector2(548, 308)
+scale = Vector2(0.89375, 0.9281251)
+texture = ExtResource("2_hk70b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D/Sprite2D"]
+position = Vector2(10.069946, -10.332489)
+shape = SubResource("RectangleShape2D_cegnh")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://5hjwswptre4s"]
+
+[ext_resource type="PackedScene" uid="uid://bhwvox23gccuh" path="res://Characters/Venus/Venus.tscn" id="1_pfknh"]
+
+[node name="L1" type="Node2D"]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(508, 277)
+
+[node name="Venus" parent="." instance=ExtResource("1_pfknh")]

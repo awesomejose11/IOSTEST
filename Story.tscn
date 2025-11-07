@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd4yu7hq3cpxv"]
+
+[ext_resource type="VideoStream" uid="uid://dxhowwoukq2g1" path="res://earth 2025.ogv" id="1_g00xm"]
+[ext_resource type="Script" uid="uid://dw518hoo4jrx8" path="res://Levels.gd" id="2_8v2sw"]
+
+[node name="Story" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-62, -28)
+script = ExtResource("2_8v2sw")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Node2D"]
+offset_right = 1280.0
+offset_bottom = 720.0
+stream = ExtResource("1_g00xm")
+autoplay = true
+script = ExtResource("2_8v2sw")
